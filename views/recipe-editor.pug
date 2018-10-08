@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  .page-header
+    h3 Recipe Editor
+
+  .row
+  form.form-horizontal(method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      .col-sm-3
+        input.form-control(type='text', name='name', id='name', placeholder='Recipe Name', autofocus, required)
+      .col-sm-3
+        input.form-control(type='text', name='type', id='type', placeholder='Type', autofocus)
+      .col-sm-3
+        input.form-control(type='text', name='boilTime', id='boilTime', placeholder='Boil Time', autofocus)
+      .col-sm-3
+        input.form-control(type='text', name='date', id='date', placeholder='Date', autofocus)        
+      .col-sm-3
+        input.form-control(type='text', name='brewer', id='brewer', placeholder='Brewer', autofocus)
+      .col-sm-3
+        input.form-control(type='text', name='batchSize', id='batchSize', placeholder='Batch Size', autofocus)
+      .col-sm-3
+        input.form-control(type='text', name='estimatedPreBoilVolume', id='estimatedPreBoilVolume', placeholder='Estimated Pre Boil Volume', autofocus)
+      .col-sm-3
+        input.form-control(type='text', name='version', id='version', placeholder='Version', autofocus)
+      .col-sm-3
+        input.form-control(type='text', name='equipment', id='equipment', placeholder='Equipment', autofocus)
+      .col-sm-3
+        input.form-control(type='text', name='bhEfficiency', id='bhEfficiency', placeholder='B H Efficiency', autofocus)
+      .col-sm-3
+        input.form-control(type='text', name='estimatedMashEfficiency', id='estimatedMashEfficiency', placeholder='Estimated Mash Efficiency', autofocus)
+      label.col-sm-1.control-label(for='locked') Locked
+      .col-sm-1
+        input.form-control(type='radio', name='locked', id='locked', placeholder='Locked', autofocus)
+    .col-sm-6
+      h2 Heading
+      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      p
+        a.btn.btn-default(href='#', role='button') View details »
+    .col-sm-6
+      h2 Heading
+      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      p
+        a.btn.btn-default(href='#', role='button') View details »
+    .col-sm-6
+      h2 Heading
+      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      p
+        a.btn.btn-default(href='#', role='button') View details »
+    .col-sm-6
+      h2 Heading
+      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      p
+        a.btn.btn-default(href='#', role='button') View details »

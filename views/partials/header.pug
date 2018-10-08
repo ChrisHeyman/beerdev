@@ -17,6 +17,29 @@
           a(href='/api') API Examples
         li(class=(title == 'Contact') ? 'active' : undefined)
           a(href='/contact') Contact
+          
+        //- if !user
+        //-   li(class=(title == 'Recipes') ? 'active' : undefined)
+        //-     a(href='/recipes') Recipes
+        //- else
+        li.dropdown(class=(title == 'Recipes') ? 'active' : undefined)
+          a.dropdown-toggle(href='/recipes', data-toggle='dropdown') Recipes
+            i.caret
+          ul.dropdown-menu
+            li
+              a(href='/recipe-editor') Recipe Editor
+            li.divider
+            li
+              a(href='/recipes') My Recipes
+        li(class=(title == 'Brewery') ? 'active' : undefined)
+          a(href='/brewery') Brewery
+        li(class=(title == 'Statistics') ? 'active' : undefined)
+          a(href='/statistics') Statistics
+        li(class=(title == 'Ingredients') ? 'active' : undefined)
+          a(href='/ingredients') Ingredients
+        li(class=(title == 'Calculators') ? 'active' : undefined)
+          a(href='/calculators') Calculators
+
       ul.nav.navbar-nav.navbar-right
         if !user
           li(class=(title == 'Login') ? 'active' : undefined)
